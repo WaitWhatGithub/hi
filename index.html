@@ -77,6 +77,18 @@
 				s=d.getSeconds();
 				clock();
 			};
+			
+			function getFormattedDate(date) {
+			  var year = date.getFullYear();
+
+			  var month = (1 + date.getMonth()).toString();
+			  month = month.length > 1 ? month : '0' + month;
+
+			  var day = date.getDate().toString();
+			  day = day.length > 1 ? day : '0' + day;
+
+			  return month + '-' + day + '-' + year;
+			}
 
 			function clock(){
 				s++;
@@ -94,7 +106,7 @@
 				$('sec',s);
 				$('min',m);
 				$('hr',h);
-				$('d', d.getMonth() > 8 ? (d.getMonth() + 1) : ('0' + (d.getMonth() + 1))) + '-' + ((d.getDate() > 9) ? d.getDate() : ('0' + d.getDate())) + '-' + d.getFullYear());
+				$('d', getFormattedDate(d));
 				animate=setTimeout(clock,1000);
 			};
 
