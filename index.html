@@ -94,7 +94,7 @@
 				$('sec',s);
 				$('min',m);
 				$('hr',h);
-				$('d', ((d.getMonth() > 8) ? (d.getMonth() + 1) : ('0' + (d.getMonth() + 1))) + '-' + ((d.getDate() > 9) ? d.getDate() : ('0' + d.getDate())) + '-' + d.getFullYear()););
+				$('d', d.getMonth() > 8 ? (d.getMonth() + 1) : ('0' + (d.getMonth() + 1))) + '-' + ((d.getDate() > 9) ? d.getDate() : ('0' + d.getDate())) + '-' + d.getFullYear());
 				animate=setTimeout(clock,1000);
 			};
 
