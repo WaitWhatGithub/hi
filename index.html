@@ -76,6 +76,7 @@
 				m=d.getMinutes();
 				s=d.getSeconds();
 				clock();
+				color();
 			};
 			
 			function getFormattedDate(date) {
@@ -109,6 +110,11 @@
 				$('d', getFormattedDate(d));
 				animate=setTimeout(clock,1000);
 			};
+			
+			function color(){
+				var params = location.search.substr(location.search.indexOf("?")+1);
+				$('color', params);
+			}
 
 			function $(id,val){
 				if(val<10){
@@ -163,8 +169,11 @@
 							
 							</div>
 							<div align="center">
-								Color of the Day: 79443b
+								Color of the Day:&nbsp
 							</div>
+						   	<div class="color">
+							  <span id="color">#00000</span>
+						  	</div>
 							
 							<div class="clock">
 								<span id="d">1</span> | <span id="hr">16</span>
