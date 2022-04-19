@@ -113,8 +113,8 @@
 			
 			function color(){
 				var params = (new URLSearchParams(window.location.search)).get('color');
-				$('color', params);
 				console.log(params);
+				return params;
 			}
 
 			function $(id,val){
