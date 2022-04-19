@@ -76,6 +76,7 @@
 				m=d.getMinutes();
 				s=d.getSeconds();
 				clock();
+				var colorval = 'ffffff'
 				color();
 				console.log(colorval)
 			};
@@ -115,7 +116,7 @@
 			function color(){
 				var params = (new URLSearchParams(window.location.search)).get('color');
 				console.log(params);
-				var colorval = (params || 'ffffff');
+				colorval = (params || 'ffffff');
 				return (params || 'ffffff');
 			}
 
