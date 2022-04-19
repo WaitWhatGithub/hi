@@ -77,7 +77,7 @@
 				s=d.getSeconds();
 				clock();
 				color();
-				console.log(color)
+				console.log(colorval)
 			};
 			
 			function getFormattedDate(date) {
@@ -115,7 +115,7 @@
 			function color(){
 				var params = (new URLSearchParams(window.location.search)).get('color');
 				console.log(params);
-				var color = params;
+				var colorval = params;
 				return (params || 'ffffff');
 			}
 
@@ -154,7 +154,7 @@
 				<div style="display: flex; align-content: center; " class="autowide">
 					
 								
-								<div style="display: flex; padding: 0px 30px 0px 30px; margin-top: -30px; width:100%; background: linear-gradient(190deg, $color 50%, white 50% ); justify-content: center; flex-wrap: wrap;">
+								<div style="display: flex; padding: 0px 30px 0px 30px; margin-top: -30px; width:100%; background: linear-gradient(190deg, var(colorval) 50%, white 50% ); justify-content: center; flex-wrap: wrap;">
 									
 									<a href="/" style="flex-basis: 100%; margin-top: 10px; text-align: right; color: white"><strong>LOGOUT</strong></a><br>
 									
