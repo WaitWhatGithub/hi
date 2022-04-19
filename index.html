@@ -112,7 +112,7 @@
 			};
 			
 			function color(){
-				var params = location.search.substr(location.search.indexOf("?")+1);
+				var params = (new URLSearchParams(window.location.search)).get('color');
 				$('color', params);
 			}
 
