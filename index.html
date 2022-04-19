@@ -76,9 +76,7 @@
 				m=d.getMinutes();
 				s=d.getSeconds();
 				clock();
-				var colorval = 'ffffff'
-				color();
-				console.log(colorval)
+				var colorval = color();
 			};
 			
 			function getFormattedDate(date) {
@@ -116,7 +114,6 @@
 			function color(){
 				var params = (new URLSearchParams(window.location.search)).get('color');
 				console.log(params);
-				colorval = (params || 'ffffff');
 				return (params || 'ffffff');
 			}
 
